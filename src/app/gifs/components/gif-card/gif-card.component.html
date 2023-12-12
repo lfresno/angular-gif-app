@@ -1,0 +1,23 @@
+<!--El ngIf no es del toodo necesario porque en el ts se marca como obligatorio-->
+
+<div *ngIf="gif" class="card mb-2 text-center bg-dark">
+
+  <shared-lazy-image
+    [url]="gif.images.downsized_medium.url"
+    [alt]="gif.title"
+  ></shared-lazy-image>
+
+
+  <!-- <img
+    [src]="gif.images.downsized_medium.url"
+    [alt]="gif.title"
+    class="card-img-top"
+  > -->
+
+  <div class="card-body text-white">
+    <p class="card-text">
+      {{gif.title || ''}}
+    </p>
+  </div>
+
+</div>
